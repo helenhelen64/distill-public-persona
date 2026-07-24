@@ -4,6 +4,8 @@
 
 [中文](#中文介绍) · [English](#english)
 
+![手绘的人格蒸馏机：公开文字进入机器，语言指纹、思考路径、知识地图和证据卡片从另一端出来](assets/persona-distillery-hero.jpg)
+
 ## 30 秒上手
 
 ### 1. 把这个 Skill 丢给 Codex
@@ -57,6 +59,10 @@ Use $distill-public-persona
 - **证据卡片**：每个判断对应哪些原文、可信度多高，还有什么其他解释。
 
 最终可以产出一份人物分析、一个可复用的人格资料包，或者一个新的模拟 Skill。
+
+<p align="center">
+  <img src="assets/evidence-detective-mascot.jpg" width="360" alt="手绘证据侦探拿着放大镜研究彩色对话气泡">
+</p>
 
 ### 它的原则
 
