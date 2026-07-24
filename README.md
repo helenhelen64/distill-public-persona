@@ -4,6 +4,47 @@
 
 [中文](#中文介绍) · [English](#english)
 
+## 30 秒上手
+
+### 1. 把这个 Skill 丢给 Codex
+
+复制下面这句话发给 Codex：
+
+```text
+请帮我安装这个 Skill：
+https://github.com/helenhelen64/distill-public-persona
+```
+
+安装完成后，新的 Codex 任务就能使用 `$distill-public-persona`。
+
+### 2. 把公开资料交进去
+
+推文导出文件、复制的文字、主页链接都可以。资料越完整，蒸出来的“味道”越稳。
+
+直接复制这段：
+
+```text
+Use $distill-public-persona
+
+目标人物：填写名字或代号
+公开资料：粘贴主页链接、推文，或者附上语料文件
+
+请分析她的语言风格、思考习惯和知识地图，
+为每个重要判断保留证据与可信度，
+最后生成一个可以重复使用的人格 Skill。
+```
+
+### 3. 收菜
+
+你会得到：
+
+- 一份语言指纹；
+- 一张思考与知识地图；
+- 一组可以追溯原文的证据卡片；
+- 一个经过边界检查的人格 Skill。
+
+一句话操作：**把资料丢进去，让它先找证据，再学那股味儿。**
+
 ## 中文介绍
 
 有人管这叫 AI 分身，我们更愿意叫它：**带证据的数字考古**。
@@ -41,24 +82,17 @@ distill-public-persona/
     └── validate_corpus.py
 ```
 
-### 快速开始
+### 大批量语料模式（可选）
 
-1. 把依法获取的公开内容整理成 JSONL 或 CSV。
-2. 按照 `references/corpus-schema.md` 统一格式。
-3. 检查语料：
+处理几百到几万条内容时，可以把依法获取的公开内容整理成 JSONL 或 CSV，再按照 `references/corpus-schema.md` 统一格式。
+
+检查语料：
 
 ```bash
 python3 scripts/validate_corpus.py path/to/corpus.jsonl
 ```
 
-4. 调用 Skill：
-
-```text
-Use $distill-public-persona to turn this public corpus into an
-evidence-grounded persona model and evaluation set.
-```
-
-5. 原始语料放在私有数据目录，公开仓库保存通用方法、来源清单和合成示例。
+原始语料放在私有数据目录，公开仓库保存通用方法、来源清单和合成示例。
 
 ### 使用边界
 
@@ -80,6 +114,30 @@ Some people call this an AI clone. We prefer: **digital archaeology with receipt
 - **Evidence cards**: source-linked claims with confidence scores and competing explanations.
 
 It can produce a public-persona analysis, a reusable persona package, or a derived simulation Skill.
+
+### 30-second setup
+
+Send this to Codex:
+
+```text
+Please install this Skill:
+https://github.com/helenhelen64/distill-public-persona
+```
+
+Then start a new task and paste:
+
+```text
+Use $distill-public-persona
+
+Target: name or alias
+Public material: profile links, pasted posts, or attached corpus files
+
+Analyze the target's language style, reasoning habits, and knowledge map.
+Keep evidence and confidence for every material finding.
+Finish by generating a reusable persona Skill.
+```
+
+That is the whole loop: **bring the public material, keep the receipts, learn the flavor.**
 
 ### The rule of the kitchen
 
@@ -105,24 +163,17 @@ distill-public-persona/
     └── validate_corpus.py
 ```
 
-### Quick start
+### Large-corpus mode (optional)
 
-1. Export or collect lawful public content as JSONL or CSV.
-2. Normalize it with `references/corpus-schema.md`.
-3. Validate the corpus:
+For hundreds or thousands of items, export or collect lawful public content as JSONL or CSV and normalize it with `references/corpus-schema.md`.
+
+Validate the corpus:
 
 ```bash
 python3 scripts/validate_corpus.py path/to/corpus.jsonl
 ```
 
-4. Invoke the Skill:
-
-```text
-Use $distill-public-persona to turn this public corpus into an
-evidence-grounded persona model and evaluation set.
-```
-
-5. Keep raw corpus files in a private data directory. Publish the reusable method, source manifest, and synthetic examples.
+Keep raw corpus files in a private data directory. Publish the reusable method, source manifest, and synthetic examples.
 
 ### Responsible use
 
