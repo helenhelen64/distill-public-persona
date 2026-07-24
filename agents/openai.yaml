@@ -1,0 +1,4 @@
+interface:
+  display_name: "Distill Public Persona"
+  short_description: "Build evidence-grounded persona models from public content"
+  default_prompt: "Use $distill-public-persona to turn this public corpus into a reusable, evidence-grounded persona skill."
